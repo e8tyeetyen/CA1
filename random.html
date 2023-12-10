@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+    
+<body>
+
+    <h1>guessing mini game</h1>
+
+    <h3>return back to index to retry</h3> // how to replay
+
+    <a href="CA1 Index.html">back to main</a> // back to the main page
+
+    <Script>
+
+        var bTryAgain = true; //need for the while LOOP
+
+        var iSecretNumber = (Math.floor(Math.random() * 5 + 1)); // sets a random number between 1 and 5
+
+        while (bTryAgain) { // a while LOOP
+ 
+        var sUserNumber = prompt("pick a number betweeen 1 to 5"); // asks the user for a number between 1 to 5 
+  
+  
+        var iUserNumberConverted = parseInt(sUserNumber); // converts the number to an interger
+  
+ 
+        if (iUserNumberConverted == iSecretNumber) { // if the users number is the same as the secret number
+   
+        alert("you got it right"); // congratulate them
+    
+        bTryAgain = false;
+        }else if (iUserNumberConverted > iSecretNumber){ // if the user number is higher than the secret number
+            alert("the number is too high!"); // says that the number is too high
+        }else{ // of if the users number is too low
+            alert("the number is too low"); //
+        }
+    }
+
+        alert("end game")
+  
+    </script>
+</body>
+   
+</html>
